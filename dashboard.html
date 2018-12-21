@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Dashboard - CDI Project</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/main_dash.css">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h5>Hola, {{Adminsitrador}}</h5>
+            </div>
+            <ul class="list-unstyled components">
+                <small>CONTENIDO</small>
+                <li>
+                    <a href="#"><i class="fa fa-th-large"></i> Dashboard</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-user"></i> Usuario</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-clock-o"></i> Programación Horaria</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-sign-out-alt"></i> Cerrar sesión</a>
+                </li>
+            </ul>
+        </nav>
+        <div id="content">
+            <!-- Barra de navegacion top -->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <button type="button" id="sidebarCollapse" class="btn btn-primary">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <img src="./img/logo_cdi.png" class="img-fluid">
+                    <button id="btn-sign-out" class="bg-dark btn"><i class="fa fa-ellipsis-h"></i></button>
+                </div>
+            </nav>
+            <button id="sign-out" class="hover btn bt-primary">Cerrar Sesion</button>
+            <!-- CONTENIDO -->
+            <div class="row">
+                <div class="col12">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam in nibh dignissim, 
+                                pharetra neque eu, ultrices felis. Nullam consequat arcu risus, ut consequat diam
+                                malesuada quis. Phasellus at suscipit urna. Cras cursus orci vel lorem tempor, id
+                                sodales enim bibendum. Sed molestie, felis ac vestibulum rhoncus, lacus nunc port
+                                metus, maximus ultricies tellus sem ac ipsum. Nulla malesuada, velit eu tincidunt
+                                ullamcorper, sapien lorem sagittis ante, id condimentum nisi ligula sed purus.
+                                Praesent id ornare nunc. Curabitur pellentesque est dui, in congue velit maximus eu.
+                                Proin eget augue mi.
+                
+                                Sed sit amet felis sem. Interdum et malesuada fames ac ante ipsum primis in faucibus.
+                                Cras hendrerit quis felis in accumsan. Nunc suscipit justo mi, vitae pretium mi
+                                fermentum ac. Nullam tempor mi at ipsum scelerisque, ut blandit nisi feugiat. Donec
+                                faucibus eros vitae lectus tincidunt, id gravida ante tristique. Interdum et malesuada
+                                fames ac ante ipsum primis in faucibus. Etiam sit amet tempus erat. Donec semper enim
+                                eget egestas consectetur. Phasellus augue dui, blandit in congue a, pretium vitae risus.</p>
+                </div>
+            </div>
+        </div>
+    </div>   
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <!-- jQueryUI -->
+   <!--  <script src="./js/vendor/jquery-ui-1.10.4.custom.min.js"></script> -->
+    <!-- JS main -->
+    <script src="./js/main.js"></script>
+</body>
+</html>
+ 
