@@ -6,9 +6,10 @@
   <title>Dashboard - CDI Project</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-  <link rel="stylesheet" href="css/main_dash.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+  <link rel="stylesheet" href="./css/main_dash.css">
+  <link rel="stylesheet" href="registro.css">
 </head>
 <body>
     <div class="wrapper">
@@ -47,178 +48,429 @@
             <button id="sign-out" class="hover btn bt-primary">Cerrar Sesion</button>
             <!-- CONTENIDO -->
             <div id="contenedor">
-                <!-- <form>
-                    <h6>Datos Personales</h6>
-                    <div class="form-row">
-                        <div class="form-group col-md-4">
-                            <label for="txtNombres">Nombres</label>
-                            <input class="form-control" type="number" id="txtNombres" required>
-                        </div>
-                        <div class="form-group col-md-4">
-                            <label for="txtPassword">Apellido Paterno</label>
-                            <input class="form-control" type="text" id="txtApPaterno"required>
-                        </div>
-                        <div class="form-group col-md-4">
-                                <label for="txtPassword">Apellido Materno</label>
-                                <input class="form-control" type="text" id="txtApMaterno"required>
-                        </div>
-                        <div class="form-group col-md-4 ">
-                            <p>Genero</p>
-                            <div class="custom-radio custom-control">
-                                <input type="radio" id="rGeneMasculino" name="radioGenero" class="custom-control-input">
-                                <label for="rGeneMasculino" class="custom-control-label">Masculino</label>
+                <button id="btnModal" type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModalRegistroUsuario">
+                    Registrar Usuario
+                </button>
+                <!-- CODE DEL MODAL -->
+                <div class="modal fade" id="ModalRegistroUsuario">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">Registro de Usuarios</h5>
+                                <button type="button" data-dismiss="modal" class="close">
+                                    <span>&times;</span>
+                                </button>
                             </div>
-                            <div class="custom-radio custom-control">
-                                <input type="radio" id="rGeneFemenino" name="radioGenero" class="custom-control-input">
-                                <label for="rGeneFemenino" class="custom-control-label">Femenino</label>
-                            </div>
-                        </div>
-                        <div class="form-group col-md-4">
-                            <select>
-                                <option>Seleccione una opcion xd</option>
-                                <option>Hola</option>
-                                <option>Hola</option>
-                                <option>Hola</option>
-                            </select>
-                        </div>
-                        <div class="form-group col-md-4">
-                                <select>
-                                    <option>Seleccione una opcion xd</option>
-                                    <option>Hola</option>
-                                    <option>Hola</option>
-                                    <option>Hola</option>
-                                </select>
-                            </div>
-                        <div class="form-group col-md-6">
-                                <label for="txtDNI">DNI</label>
-                                <input class="form-control" type="number" id="txtDNI" required>
-                        </div>
-                        <div class="form-group col-md-6">
-                            <label for="txtPassword">Contraseña</label>
-                            <input class="form-control" type="password" id="txtPassword" required>
-                        </div>
-                    </div>
-                        <h6>Datos de contacto</h6>
-                        <div class="form-row">
-                            <div class="form-group col-md-6">
-                                <label for="txtEmail">Correo electrónico</label>
-                                <input class="form-control" type="email" id="txtEmail" required>
-                            </div>
-                            <div class="form-group col-md-3">
-                                <label for="txtPhone">Teléfono de contacto</label>
-                                <input class="form-control" type="number" id="txtPhone" required>
-                            </div>
-                            <div class="form-group col-md-3">
-                                <label for="txtFechaNac">Fecha de Nacimiento</label>
-                                <input class="form-control" type="date" id="txtFechaNac" required>
-                            </div>
-                        </div>
-                    </div>
-                </form> -->
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModalRegistroUsuario">
-                Registrar Usuario
-            </button>
-            <!-- CODE DEL MODAL -->
-            <div class="modal fade" id="ModalRegistroUsuario">
-                <div class="modal-dialog modal-lg">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title">Registro de Usuarios</h5>
-                            <button type="button" class="close">
-                                <span>&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <!-- AGREGAR FORMULARIO DE REGISTRO -->
-                            <form>
-                                    <h6>Datos Personales</h6>
-                                    <div class="form-row">
-                                        <div class="form-group col-md-4">
-                                            <label for="txtNombres">Nombres</label>
-                                            <input class="form-control" type="number" id="txtNombres" required>
-                                        </div>
-                                        <div class="form-group col-md-4">
-                                            <label for="txtPassword">Apellido Paterno</label>
-                                            <input class="form-control" type="text" id="txtApPaterno"required>
-                                        </div>
-                                        <div class="form-group col-md-4">
-                                                <label for="txtPassword">Apellido Materno</label>
-                                                <input class="form-control" type="text" id="txtApMaterno"required>
-                                        </div>
-                                        <div class="form-group col-md-4 ">
-                                            <p>Genero</p>
-                                            <div class="custom-radio custom-control">
-                                                <input type="radio" id="rGeneMasculino" name="radioGenero" class="custom-control-input">
-                                                <label for="rGeneMasculino" class="custom-control-label">Masculino</label>
-                                            </div>
-                                            <div class="custom-radio custom-control">
-                                                <input type="radio" id="rGeneFemenino" name="radioGenero" class="custom-control-input">
-                                                <label for="rGeneFemenino" class="custom-control-label">Femenino</label>
-                                            </div>
-                                        </div>
-                                        <div class="form-group col-md-4">
-                                            <label for="selectUniversidad">Universidad</label>
-                                            <select class="form-control" id="selectUniversidad">
-                                                <option>Seleccione una opcion xd</option>
-                                                <option>Hola</option>
-                                                <option>Hola</option>
-                                                <option>Hola</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group col-md-4">
-                                        <label for="selectRol">Rol</label>
-                                            <select class="form-control" id="selectRol">
-                                                <option>Seleccione una opcion xd</option>
-                                                <option>Hola</option>
-                                                <option>Hola</option>
-                                                <option>Hola</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                                <label for="txtDNI">DNI</label>
-                                                <input class="form-control" type="number" id="txtDNI" required>
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <label for="txtPassword">Contraseña</label>
-                                            <input class="form-control" type="password" id="txtPassword" required>
-                                        </div>
-                                    </div>
-                                        <h6>Datos de contacto</h6>
+                            <div class="modal-body">
+                                <!-- AGREGAR FORMULARIO DE REGISTRO -->
+                                <form class="align-items-center">
+                                        <h6>Datos Personales</h6>
                                         <div class="form-row">
-                                            <div class="form-group col-md-6">
-                                                <label for="txtEmail">Correo electrónico</label>
-                                                <input class="form-control" type="email" id="txtEmail" required>
+                                            <div class="form-group col-md-4">
+                                                <label for="txtNombres">Nombres</label>
+                                                <input class="form-control" type="text" id="txtNombres" required>
                                             </div>
-                                            <div class="form-group col-md-3">
-                                                <label for="txtPhone">Teléfono de contacto</label>
-                                                <input class="form-control" type="number" id="txtPhone" required>
+                                            <div class="form-group col-md-4">
+                                                <label for="txtPassword">Apellido Paterno</label>
+                                                <input class="form-control" type="text" id="txtApPaterno"required>
                                             </div>
-                                            <div class="form-group col-md-3">
-                                                <label for="txtFechaNac">Fecha de Nacimiento</label>
-                                                <input class="form-control" type="date" id="txtFechaNac" required>
+                                            <div class="form-group col-md-4">
+                                                    <label for="txtPassword">Apellido Materno</label>
+                                                    <input class="form-control" type="text" id="txtApMaterno"required>
+                                            </div>
+                                            <div class="form-group col-md-4 ">
+                                                <p>Genero</p>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="radioGenero" id="rGeneMasculino" value="1">
+                                                    <label class="form-check-label" for="rGeneMasculino">Masculino</label>
+                                                </div>
+                                                <div class="form-check form-check-inline">
+                                                    <input class="form-check-input" type="radio" name="radioGenero" id="rGeneFemenino" value="0">
+                                                    <label class="form-check-label" for="rGeneFemenino">Femenino</label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                                <label for="selectUniversidad">Universidad</label>
+                                                <select class="form-control" id="selectUniversidad">
+                                                    <option selected>Seleccione una opción</option>
+                                                    <option>Opción #1</option>
+                                                    <option>Opción #2</option>
+                                                    <option>Opción #3</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-md-4">
+                                            <label for="selectRol">Rol</label>
+                                                <select class="form-control" id="selectRol">
+                                                    <option selected>Seleccione una opción</option>
+                                                    <option>Opción #1</option>
+                                                    <option>Opción #2</option>
+                                                    <option>Opción #3</option>
+                                                </select>
                                             </div>
                                         </div>
-                                    </div>
-                                    <hr>
-                                    <button type="button" class="btn btn-modal btn-secondary">Cancelar</button>
-                                    <button type="button" class="btn btn-modal btn-primary">Guardar</button>
-                                </form>
-                                <!-- CIERRE DEL CUERPO DEL MODAL -->
+                                        <h6>Datos de Contacto</h6>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-6">
+                                                    <label for="txtEmail">Correo electrónico</label>
+                                                    <input class="form-control" type="email" id="txtEmail" required>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="txtPhone">Teléfono de contacto</label>
+                                                    <input class="form-control" type="number" id="txtPhone" required>
+                                                </div>
+                                                <div class="form-group col-md-3">
+                                                    <label for="txtFechaNac">Fecha de Nacimiento</label>
+                                                    <input class="form-control" type="date" id="txtFechaNac" required>
+                                                </div>
+                                            </div>
+                                            <h6>Datos de la cuenta</h6>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-4">
+                                                    <label for="txtDNI">DNI</label>
+                                                    <input class="form-control" type="number" id="txtDNI" required>
+                                                </div>
+                                                <div class="form-group col-md-4">
+                                                    <label for="txtPassword">Contraseña</label>
+                                                    <input class="form-control" type="password" id="txtPassword" required>
+                                                </div>
+                                                <div class="form-group col-md-4 ">
+                                                    <p>Estado de la cuenta</p>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="rEstado" id="rEstActivo" value="true">
+                                                        <label class="form-check-label" for="rEstActivo">Activo</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="rEstado" id="rEstInactivo" value="false">
+                                                        <label class="form-check-label" for="rEstInactivo">Inactivo</label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-6">
+                                                    <div class="custom-file">
+                                                        <input type="file" class="custom-file-input" id="customFile">
+                                                        <label class="custom-file-label" for="customFile">Elegir foto de perfil</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="form-group col-md-11 text-right">
+                                                <button type="button" data-dismiss="modal" class="btn btn-secondary">Cancelar</button>
+                                                <button type="submit" class="btn btn-primary">Guardar</button>
+                                            </div>  
+                                        </div>
+                                    </form>
+                                    <!-- CIERRE DEL CUERPO DEL MODAL -->
+                            </div>
+                            <div class="modal-footer">
+                                
+                            </div>
                         </div>
-                        <div class="modal-footer">
-                            
-                        </div>
-                    </div>
+                </div><!-- FIN DEL MODAL-->
+                <div class="table-responsive">
+                    <table id="tabla_registro" class="table table-hover">
+                        <thead class="thead-light">
+                            <tr>
+                                <th scope="col">DNI</th>
+                                <th scope="col">Nombres</th>
+                                <th scope="col">Rol</th>
+                                <th scope="col">Estado</th>
+                                <th scope="col">Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td scope="row">1234678</td>
+                                <td>Mirtha Benites Gonzales</td>
+                                <td>Docente</td>
+                                <td><i class="fa fa-times-circle text-danger"></i></td>
+                                <td>
+                                    <a data-toggle="modal" data-target="#ModalEditUsuario"><i class="fa fa-edit"></i></a>
+                                    <a data-toggle="modal" data-target="#ModalViewUsuario"><i class="fa fa-id-card"></i></a>
+                                    <a><i class="fa fa-angle-up"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">1234678</td>
+                                <td>Jose Chavez</td>
+                                <td>Alumno</td>
+                                <td><i class="fa fa-check-circle text-success"></i></td>
+                                <td>
+                                    <a href="#"><i class="fa fa-edit"></i></a>
+                                    <a href="#"><i class="fas fa-id-card-alt"></i></a>
+                                    <a href="#"><i class="fas fa-fingerprint"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">1234678</td>
+                                <td>Carlos Gomez</td>
+                                <td>Docente</td>
+                                <td><i class="fa fa-times-circle text-danger"></i></td>
+                                <td>
+                                    <a href="#"><i class="fa fa-edit"></i></a>
+                                    <a href="#"><i class="fas fa-id-card-alt"></i></a>
+                                    <a href="#"><i class="fas fa-fingerprint"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">1234678</td>
+                                <td>Alberto Miranda</td>
+                                <td>Alumno</td>
+                                <td><i class="fa fa-check-circle text-success"></i></td>
+                                <td>
+                                    <a href="#"><i class="fa fa-edit"></i></a>
+                                    <a href="#"><i class="fas fa-id-card-alt"></i></a>
+                                    <a href="#"><i class="fas fa-fingerprint"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">1234678</td>
+                                <td>Raul Chavez</td>
+                                <td>Docente</td>
+                                <td><i class="fa fa-times-circle text-danger"></i></td>
+                                <td>
+                                    <a href="#"><i class="fa fa-edit"></i></a>
+                                    <a href="#"><i class="fas fa-id-card-alt"></i></a>
+                                    <a href="#"><i class="fas fa-fingerprint"></i></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <!-- CODE DEL MODAL -->
+                <div class="modal fade" id="ModalEditUsuario">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Modificar usuarios</h5>
+                                    <button type="button" data-dismiss="modal" class="close">
+                                        <span>&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <!-- AGREGAR FORMULARIO DE REGISTRO -->
+                                    <form class="align-items-center">
+                                            <h6>Datos Personales</h6>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-4">
+                                                    <label for="txtNombres">Nombres</label>
+                                                    <input class="form-control" type="text" id="txtNombres" required>
+                                                </div>
+                                                <div class="form-group col-md-4">
+                                                    <label for="txtPassword">Apellido Paterno</label>
+                                                    <input class="form-control" type="text" id="txtApPaterno"required>
+                                                </div>
+                                                <div class="form-group col-md-4">
+                                                        <label for="txtPassword">Apellido Materno</label>
+                                                        <input class="form-control" type="text" id="txtApMaterno"required>
+                                                </div>
+                                                <div class="form-group col-md-4 ">
+                                                    <p>Genero</p>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="radioGenero" id="rGeneMasculino" value="1">
+                                                        <label class="form-check-label" for="rGeneMasculino">Masculino</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="radioGenero" id="rGeneFemenino" value="0">
+                                                        <label class="form-check-label" for="rGeneFemenino">Femenino</label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-4">
+                                                    <label for="selectUniversidad">Universidad</label>
+                                                    <select class="form-control" id="selectUniversidad">
+                                                        <option selected>Seleccione una opción</option>
+                                                        <option>Opción #1</option>
+                                                        <option>Opción #2</option>
+                                                        <option>Opción #3</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group col-md-4">
+                                                <label for="selectRol">Rol</label>
+                                                    <select class="form-control" id="selectRol">
+                                                        <option selected>Seleccione una opción</option>
+                                                        <option>Opción #1</option>
+                                                        <option>Opción #2</option>
+                                                        <option>Opción #3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <h6>Datos de Contacto</h6>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-6">
+                                                        <label for="txtEmail">Correo electrónico</label>
+                                                        <input class="form-control" type="email" id="txtEmail" required>
+                                                    </div>
+                                                    <div class="form-group col-md-3">
+                                                        <label for="txtPhone">Teléfono de contacto</label>
+                                                        <input class="form-control" type="number" id="txtPhone" required>
+                                                    </div>
+                                                    <div class="form-group col-md-3">
+                                                        <label for="txtFechaNac">Fecha de Nacimiento</label>
+                                                        <input class="form-control" type="date" id="txtFechaNac" required>
+                                                    </div>
+                                                </div>
+                                                <h6>Datos de la cuenta</h6>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-4">
+                                                        <label for="txtDNI">DNI</label>
+                                                        <input class="form-control" type="number" id="txtDNI" disabled required>
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                        <label for="txtPassword">Contraseña</label>
+                                                        <input class="form-control" type="password" id="txtPassword" required>
+                                                    </div>
+                                                    <div class="form-group col-md-4 ">
+                                                        <p>Estado de la cuenta</p>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="rEstado" id="rEstActivo" value="true">
+                                                            <label class="form-check-label" for="rEstActivo">Activo</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="rEstado" id="rEstInactivo" value="false">
+                                                            <label class="form-check-label" for="rEstInactivo">Inactivo</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group col-md-6">
+                                                        <div class="custom-file">
+                                                            <input type="file" class="custom-file-input" id="customFile">
+                                                            <label class="custom-file-label" for="customFile">Elegir foto de perfil</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-11 text-right">
+                                                    <button type="button" data-dismiss="modal" class="btn btn-secondary">Cancelar</button>
+                                                    <button type="submit" class="btn btn-primary">Guardar</button>
+                                                </div>  
+                                            </div>
+                                        </form>
+                                        <!-- CIERRE DEL CUERPO DEL MODAL -->
+                                </div>
+                                <div class="modal-footer">
+                                    
+                                </div>
+                            </div>
+                </div><!-- FIN DEL MODAL-->
+                <!-- CODE DEL MODAL -->
+                <div class="modal fade" id="ModalViewUsuario">
+                        <div class="modal-dialog modal-lg">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">Detalle de usuario</h5>
+                                    <button type="button" data-dismiss="modal" class="close">
+                                        <span>&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <!-- AGREGAR FORMULARIO DE REGISTRO -->
+                                    <form class="align-items-center">
+                                            <h6>Datos Personales</h6>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-4">
+                                                    <label for="txtNombres">Nombres</label>
+                                                    <input class="form-control" type="text" id="txtNombres" required>
+                                                </div>
+                                                <div class="form-group col-md-4">
+                                                    <label for="txtPassword">Apellido Paterno</label>
+                                                    <input class="form-control" type="text" id="txtApPaterno"required>
+                                                </div>
+                                                <div class="form-group col-md-4">
+                                                        <label for="txtPassword">Apellido Materno</label>
+                                                        <input class="form-control" type="text" id="txtApMaterno"required>
+                                                </div>
+                                                <div class="form-group col-md-4 ">
+                                                    <p>Genero</p>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="radioGenero" id="rGeneMasculino" value="1">
+                                                        <label class="form-check-label" for="rGeneMasculino">Masculino</label>
+                                                    </div>
+                                                    <div class="form-check form-check-inline">
+                                                        <input class="form-check-input" type="radio" name="radioGenero" id="rGeneFemenino" value="0">
+                                                        <label class="form-check-label" for="rGeneFemenino">Femenino</label>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-md-4">
+                                                    <label for="selectUniversidad">Universidad</label>
+                                                    <select class="form-control" id="selectUniversidad">
+                                                        <option selected>Seleccione una opción</option>
+                                                        <option>Opción #1</option>
+                                                        <option>Opción #2</option>
+                                                        <option>Opción #3</option>
+                                                    </select>
+                                                </div>
+                                                <div class="form-group col-md-4">
+                                                <label for="selectRol">Rol</label>
+                                                    <select class="form-control" id="selectRol">
+                                                        <option selected>Seleccione una opción</option>
+                                                        <option>Opción #1</option>
+                                                        <option>Opción #2</option>
+                                                        <option>Opción #3</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            <h6>Datos de Contacto</h6>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-6">
+                                                        <label for="txtEmail">Correo electrónico</label>
+                                                        <input class="form-control" type="email" id="txtEmail" required>
+                                                    </div>
+                                                    <div class="form-group col-md-3">
+                                                        <label for="txtPhone">Teléfono de contacto</label>
+                                                        <input class="form-control" type="number" id="txtPhone" required>
+                                                    </div>
+                                                    <div class="form-group col-md-3">
+                                                        <label for="txtFechaNac">Fecha de Nacimiento</label>
+                                                        <input class="form-control" type="date" id="txtFechaNac" required>
+                                                    </div>
+                                                </div>
+                                                <h6>Datos de la cuenta</h6>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-4">
+                                                        <label for="txtDNI">DNI</label>
+                                                        <input class="form-control" type="number" id="txtDNI" disabled required>
+                                                    </div>
+                                                    <div class="form-group col-md-4">
+                                                        <label for="txtPassword">Contraseña</label>
+                                                        <input class="form-control" type="password" id="txtPassword" required>
+                                                    </div>
+                                                    <div class="form-group col-md-4 ">
+                                                        <p>Estado de la cuenta</p>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="rEstado" id="rEstActivo" value="true">
+                                                            <label class="form-check-label" for="rEstActivo">Activo</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="rEstado" id="rEstInactivo" value="false">
+                                                            <label class="form-check-label" for="rEstInactivo">Inactivo</label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group col-md-11 text-right">
+                                                    <button type="button" data-dismiss="modal" class="btn btn-secondary">Cancelar</button>
+                                                    <button type="submit" class="btn btn-primary">Guardar</button>
+                                                </div>  
+                                            </div>
+                                        </form>
+                                        <!-- CIERRE DEL CUERPO DEL MODAL -->
+                                </div>
+                                <div class="modal-footer">
+                                    
+                                </div>
+                            </div>
+                    </div><!-- FIN DEL MODAL-->
                 </div>
             </div>
-            </div>
-        </div>  
+        </div>
+    </div>  
     <!-- jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <!-- Bootstrap JS -->
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-    <!-- jQueryUI -->
-   <!--  <script src="./js/vendor/jquery-ui-1.10.4.custom.min.js"></script> -->
+    <!-- jQuerySorter -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.28.14/js/jquery.tablesorter.min.js"></script>
+    <!-- CustomFileJS -->
+    <script src="https://cdn.jsdelivr.net/npm/bs-custom-file-input/dist/bs-custom-file-input.min.js"></script>
     <!-- JS main -->
     <script src="./js/main.js"></script>
 </body>

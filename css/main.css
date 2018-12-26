@@ -1,55 +1,60 @@
-body{
-    background-color: #007bff;
-    text-align: center;
-}
-h1{
-    color: white;
-    padding-bottom: 3%;
-    padding-top: 0.5em;
-    font-weight: bold;
-}
-h3 , p{
-    color: white;
-    padding-bottom: 0;
-}
-input{
-    margin-top: 1em;
-    margin-bottom: 1em;
+body {
+  background-color: #007bff;
+  text-align: center;
 }
 
-img{
-    width: 100%;
-    border-radius: 15px;
-    height: 100% !important 
+h1 {
+  color: white;
+  padding-bottom: 3%;
+  padding-top: 0.5em;
+  font-weight: bold;
 }
 
-.btn{
-    color: white;
-    width: 100%;
+h3, p {
+  color: white;
+  padding-bottom: 0;
 }
 
-footer p{
-    bottom: 2px;
-    color: white;
-    font-weight: bold;
-    text-align: center;
-    position: relative;
-    margin-top: 5%;
-
+input {
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
-.div-form{
-    background-color: rgb(0, 102, 151);
-    padding: 3em;
-}
-.row{
-    padding-top:0.5em;
+img {
+  width: 100%;
+  border-radius: 15px;
+  height: 100% !important;
 }
 
-div{
-    border-radius: 10px;
+.btn {
+  color: white;
+  width: 100%;
 }
 
-row div{
-    margin-left: 10px
+footer p {
+  bottom: 2px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+  margin-top: 5%;
 }
+
+.div-form {
+  background-color: #006697;
+  padding: 3em;
+}
+
+.row {
+  padding-top: 0.5em;
+}
+
+div {
+  border-radius: 10px;
+}
+
+row div {
+  margin-left: 10px;
+}
+
+/*# sourceMappingURL=main.css.map */
