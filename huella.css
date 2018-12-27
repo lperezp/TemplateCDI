@@ -1,0 +1,21 @@
+#contenedor {
+  padding-left: 2em;
+  padding-right: 2em;
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+
+#contenedor #btnModal {
+  margin: 1em 0;
+}
+
+.cont-huella {
+  background-color: #aebbc7;
+  min-height: 8em;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+/*# sourceMappingURL=huella.css.map */

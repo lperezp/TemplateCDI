@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Dashboard - CDI Project</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+  <link rel="stylesheet" href="./css/main_dash.css">
+  <link rel="stylesheet" href="/huella.css">
+</head>
+<body>
+    <div class="wrapper">
+        <!-- Sidebar -->
+        <nav id="sidebar">
+            <div class="sidebar-header">
+                <h5>Hola, {{Administrador}}</h5>
+            </div>
+            <ul class="list-unstyled components">
+                <small>CONTENIDO</small>
+                <li>
+                    <a href="#"><i class="fa fa-th-large"></i> Dashboard</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-user"></i> Usuario</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-clock-o"></i> Programación Horaria</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-sign-out-alt"></i> Cerrar sesión</a>
+                </li>
+            </ul>
+        </nav>
+        <div id="content">
+            <!-- Barra de navegacion top -->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+                <div class="container-fluid">
+                    <button type="button" id="sidebarCollapse" class="btn btn-primary">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                    <img src="./img/logo_cdi.png" class="img-fluid">
+                    <button id="btn-sign-out" class="bg-dark btn"><i class="fa fa-ellipsis-h"></i></button>
+                </div>
+            </nav>
+            <button id="sign-out" class="hover btn bt-primary">Cerrar Sesion</button>
+            <!-- CONTENIDO -->
+            <div id="contenedor">
+                    <h4>Registro de Huella</h4>
+                <p>Para registrar la huella de <span style="font-weight: bold">{{ Usuario }}</span> dar clic en comenzar.</p>
+                <div class="row">
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <div class="card-header">
+                                Índice izquierda
+                            </div>
+                            <img id="dedoi" class="card-img-top img-fluid hidden" src="img/huella.png">
+                            <div class="card-body">
+                                <p class="card-title">Acerque su huella de la mano izquierda y haga clic en Guardar.</p>
+                                <button class="btn btn-primary">Guardar</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <div class="card-header">
+                                Índice derecha
+                            </div>
+                            <img id="dedod" class="card-img-top img-fluid" src="img/huella.png">
+                            <div class="card-body">
+                                <p class="card-title">Acerque su huella de la mano derecha y haga clic en Guardar.</p>
+                                <button class="btn btn-primary">Guardar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>  
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+    <!-- jQuerySorter -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.28.14/js/jquery.tablesorter.min.js"></script>
+    <!-- CustomFileJS -->
+    <script src="https://cdn.jsdelivr.net/npm/bs-custom-file-input/dist/bs-custom-file-input.min.js"></script>
+    <!-- JS main -->
+    <script src="./js/main.js"></script>
+</body>
+</html>
+ 

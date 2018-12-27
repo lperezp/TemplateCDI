@@ -1,22 +1,24 @@
 $gris : #343a40;
 $azul: #007bff;
 $celeste : #008ccb;
+$gris_claro: #aebbc7;
 $blanco: #ffffff;
 
-.table-responsive{
+#contenedor {
     padding-left: 2em;
     padding-right: 2em;
-}
+    margin-top: 1em;
+    margin-bottom: 2em; 
+  }
+  
+  #contenedor #btnModal {
+    margin: 1em 0;
+  }
 
-#contenedor #btnModal{
-    margin: 2em;
+.cont-huella{
+    background-color: $gris_claro;
+    min-height: 8em;
 }
-
-form button{
-    margin-right: 3em;
-}
-
-$custom-file-text: (
-  en: "Browse",
-  es: "Elegir"
-);
+.hidden{
+    visibility: hidden
+} 

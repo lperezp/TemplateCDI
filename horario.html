@@ -48,16 +48,16 @@
             <button id="sign-out" class="hover btn bt-primary">Cerrar Sesion</button>
             <!-- CONTENIDO -->
             <div id="contenedor">
-                    <h4>Listado de usuarios</h4>
-                <button id="btnModal" type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModalRegistroUsuario">
-                    Registrar Usuario
+                <h4>Listado de horarios</h4>
+                <button id="btnModal" type="button" class="btn btn-primary" data-toggle="modal" data-target="#ModalRegistroHorario">
+                    Registrar Programación
                 </button>
                 <!-- CODE DEL MODAL -->
-                <div class="modal fade" id="ModalRegistroUsuario">
+                <div class="modal fade" id="ModalRegistroHorario">
                     <div class="modal-dialog modal-lg">
                         <div class="modal-content">
                             <div class="modal-header">
-                                <h5 class="modal-title">Registro de Usuarios</h5>
+                                <h5 class="modal-title">Registrar Programación</h5>
                                 <button type="button" data-dismiss="modal" class="close">
                                     <span>&times;</span>
                                 </button>
@@ -67,93 +67,53 @@
                                 <form class="align-items-center">
                                         <h6>Datos Personales</h6>
                                         <div class="form-row">
-                                            <div class="form-group col-md-4">
-                                                <label for="txtNombres">Nombres</label>
-                                                <input class="form-control" type="text" id="txtNombres" required>
+                                            <div class="form-group col-md-6">
+                                                <label for="selectUsuario">Usuario</label>
+                                                <select class="form-control" id="selectUsuario">
+                                                    <option selected>Seleccione una usuario</option>
+                                                    <option>Pepito</option>
+                                                    <option>Juanito</option>
+                                                    <option>Benito</option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group col-md-6">
+                                                <label for="selectSede">Sede</label>
+                                                <select class="form-control" id="selectSede">
+                                                    <option selected>Seleccione una sede</option>
+                                                    <option>Trujillo</option>
+                                                    <option>Lima</option>
+                                                    <option>Puno</option>
+                                                </select>
                                             </div>
                                             <div class="form-group col-md-4">
-                                                <label for="txtPassword">Apellido Paterno</label>
-                                                <input class="form-control" type="text" id="txtApPaterno"required>
+                                                <label for="txtDatetime">Fecha y Hora de inicio</label>
+                                                <input class="form-control" type="datetime-local" id="txtDatetime" required>
                                             </div>
                                             <div class="form-group col-md-4">
-                                                    <label for="txtPassword">Apellido Materno</label>
-                                                    <input class="form-control" type="text" id="txtApMaterno"required>
+                                                <label for="txtDatetime">Fecha y Hora final</label>
+                                                <input class="form-control" type="datetime-local" id="txtDatetime" required>
                                             </div>
                                             <div class="form-group col-md-4 ">
-                                                <p>Genero</p>
+                                                <p>Estado</p>
                                                 <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio" name="radioGenero" id="rGeneMasculino" value="1">
-                                                    <label class="form-check-label" for="rGeneMasculino">Masculino</label>
+                                                    <input class="form-check-input" type="radio" name="rEstado" id="rEstActivo" value="true">
+                                                    <label class="form-check-label" for="rEstActivo">Activo</label>
                                                 </div>
                                                 <div class="form-check form-check-inline">
-                                                    <input class="form-check-input" type="radio" name="radioGenero" id="rGeneFemenino" value="0">
-                                                    <label class="form-check-label" for="rGeneFemenino">Femenino</label>
+                                                    <input class="form-check-input" type="radio" name="rEstado" id="rEstInactivo" value="false">
+                                                    <label class="form-check-label" for="rEstInactivo">Inactivo</label>
                                                 </div>
-                                            </div>
-                                            <div class="form-group col-md-4">
-                                                <label for="selectUniversidad">Universidad</label>
-                                                <select class="form-control" id="selectUniversidad">
-                                                    <option selected>Seleccione una opción</option>
-                                                    <option>Opción #1</option>
-                                                    <option>Opción #2</option>
-                                                    <option>Opción #3</option>
-                                                </select>
-                                            </div>
-                                            <div class="form-group col-md-4">
-                                            <label for="selectRol">Rol</label>
-                                                <select class="form-control" id="selectRol">
-                                                    <option selected>Seleccione una opción</option>
-                                                    <option>Opción #1</option>
-                                                    <option>Opción #2</option>
-                                                    <option>Opción #3</option>
-                                                </select>
                                             </div>
                                         </div>
                                         <h6>Datos de Contacto</h6>
                                             <div class="form-row">
-                                                <div class="form-group col-md-6">
-                                                    <label for="txtEmail">Correo electrónico</label>
-                                                    <input class="form-control" type="email" id="txtEmail" required>
-                                                </div>
-                                                <div class="form-group col-md-3">
-                                                    <label for="txtPhone">Teléfono de contacto</label>
-                                                    <input class="form-control" type="number" id="txtPhone" required>
-                                                </div>
-                                                <div class="form-group col-md-3">
-                                                    <label for="txtFechaNac">Fecha de Nacimiento</label>
-                                                    <input class="form-control" type="date" id="txtFechaNac" required>
-                                                </div>
-                                            </div>
-                                            <h6>Datos de la cuenta</h6>
-                                            <div class="form-row">
-                                                <div class="form-group col-md-4">
-                                                    <label for="txtDNI">DNI</label>
-                                                    <input class="form-control" type="number" id="txtDNI" required>
-                                                </div>
-                                                <div class="form-group col-md-4">
-                                                    <label for="txtPassword">Contraseña</label>
-                                                    <input class="form-control" type="password" id="txtPassword" required>
-                                                </div>
-                                                <div class="form-group col-md-4 ">
-                                                    <p>Estado de la cuenta</p>
-                                                    <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="rEstado" id="rEstActivo" value="true">
-                                                        <label class="form-check-label" for="rEstActivo">Activo</label>
-                                                    </div>
-                                                    <div class="form-check form-check-inline">
-                                                        <input class="form-check-input" type="radio" name="rEstado" id="rEstInactivo" value="false">
-                                                        <label class="form-check-label" for="rEstInactivo">Inactivo</label>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group col-md-6">
-                                                    <div class="custom-file">
-                                                        <input type="file" class="custom-file-input" id="customFile">
-                                                        <label class="custom-file-label" for="customFile">Elegir foto de perfil</label>
-                                                    </div>
+                                                <div class="form-group col-md-12">
+                                                    <label for="txtDescripcion">Descripción</label>
+                                                    <textarea class="form-control" type="email" id="txtDescripcion" required></textarea>
                                                 </div>
                                             </div>
                                         <div class="form-row">
-                                            <div class="form-group col-md-11 text-right">
+                                            <div class="form-group col-md-12 text-right">
                                                 <button type="button" data-dismiss="modal" class="btn btn-secondary">Cancelar</button>
                                                 <button type="submit" class="btn btn-primary">Guardar</button>
                                             </div>  
@@ -170,67 +130,63 @@
                     <table id="tabla_registro" class="table table-hover">
                         <thead class="thead-light">
                             <tr>
-                                <th scope="col">DNI</th>
                                 <th scope="col">Nombres</th>
-                                <th scope="col">Rol</th>
+                                <th scope="col">Sede</th>
+                                <th scope="col">Inicio</th>
+                                <th scope="col">Fin</th>
                                 <th scope="col">Estado</th>
                                 <th scope="col">Acciones</th>
                             </tr>
                         </thead>
                         <tbody>
                             <tr>
-                                <td scope="row">1234678</td>
-                                <td>Mirtha Benites Gonzales</td>
-                                <td>Docente</td>
+                                <td scope="row">Pepe Luis</td>
+                                <td>San Martin</td>
+                                <td>11/12/2018 08:30</td>
+                                <td>26/12/2018 10:00</td>
+                                <td><i class="fa fa-check-circle text-success"></i></td>
+                                <td>
+                                    <a data-toggle="modal" data-target="#ModalEditUsuario"><i class="fa fa-edit"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Jose Olaya</td>
+                                <td>Lima</td>
+                                <td>11/12/2018 08:30</td>
+                                <td>26/12/2018 10:00</td>
                                 <td><i class="fa fa-times-circle text-danger"></i></td>
                                 <td>
                                     <a data-toggle="modal" data-target="#ModalEditUsuario"><i class="fa fa-edit"></i></a>
-                                    <a data-toggle="modal" data-target="#ModalViewUsuario"><i class="fa fa-id-card"></i></a>
-                                    <a><i class="fa fa-angle-up"></i></a>
                                 </td>
                             </tr>
                             <tr>
-                                <td scope="row">1234678</td>
-                                <td>Jose Chavez</td>
-                                <td>Alumno</td>
-                                <td><i class="fa fa-check-circle text-success"></i></td>
-                                <td>
-                                    <a href="#"><i class="fa fa-edit"></i></a>
-                                    <a href="#"><i class="fas fa-id-card-alt"></i></a>
-                                    <a href="#"><i class="fas fa-fingerprint"></i></a>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td scope="row">1234678</td>
-                                <td>Carlos Gomez</td>
-                                <td>Docente</td>
+                                <td scope="row">Ricardo Palma</td>
+                                <td>Trujillo</td>
+                                <td>11/12/2018 08:30</td>
+                                <td>26/12/2018 10:00</td>
                                 <td><i class="fa fa-times-circle text-danger"></i></td>
                                 <td>
-                                    <a href="#"><i class="fa fa-edit"></i></a>
-                                    <a href="#"><i class="fas fa-id-card-alt"></i></a>
-                                    <a href="#"><i class="fas fa-fingerprint"></i></a>
+                                    <a data-toggle="modal" data-target="#ModalEditUsuario"><i class="fa fa-edit"></i></a>
                                 </td>
                             </tr>
                             <tr>
-                                <td scope="row">1234678</td>
-                                <td>Alberto Miranda</td>
-                                <td>Alumno</td>
+                                <td scope="row">Mirtha Benites Gonzales</td>
+                                <td>Puno</td>
+                                <td>11/12/2018 08:30</td>
+                                <td>26/12/2018 10:00</td>
                                 <td><i class="fa fa-check-circle text-success"></i></td>
                                 <td>
-                                    <a href="#"><i class="fa fa-edit"></i></a>
-                                    <a href="#"><i class="fas fa-id-card-alt"></i></a>
-                                    <a href="#"><i class="fas fa-fingerprint"></i></a>
+                                    <a data-toggle="modal" data-target="#ModalEditUsuario"><i class="fa fa-edit"></i></a>
                                 </td>
                             </tr>
                             <tr>
-                                <td scope="row">1234678</td>
-                                <td>Raul Chavez</td>
-                                <td>Docente</td>
-                                <td><i class="fa fa-times-circle text-danger"></i></td>
+                                <td scope="row">Benito</td>
+                                <td>Piura</td>
+                                <td>11/12/2018 08:30</td>
+                                <td>26/12/2018 10:00</td>
+                                <td><i class="fa fa-check-circle text-success"></i></td>
                                 <td>
-                                    <a href="#"><i class="fa fa-edit"></i></a>
-                                    <a href="#"><i class="fas fa-id-card-alt"></i></a>
-                                    <a href="#"><i class="fas fa-fingerprint"></i></a>
+                                    <a data-toggle="modal" data-target="#ModalEditUsuario"><i class="fa fa-edit"></i></a>
                                 </td>
                             </tr>
                         </tbody>
