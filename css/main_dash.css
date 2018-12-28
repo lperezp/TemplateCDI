@@ -126,4 +126,10 @@ img {
   display: inline;
 }
 
+#contenedor {
+  padding-left: 2em;
+  padding-right: 2em;
+  margin-top: 1em;
+  margin-bottom: 2em; 
+}
 /*# sourceMappingURL=main_dash.css.map */

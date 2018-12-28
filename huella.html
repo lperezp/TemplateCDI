@@ -7,9 +7,9 @@
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
   <link rel="stylesheet" href="./css/main_dash.css">
-  <link rel="stylesheet" href="/huella.css">
+  <link rel="stylesheet" href="css/huella.css">
 </head>
 <body>
     <div class="wrapper">
@@ -45,33 +45,33 @@
                     <button id="btn-sign-out" class="bg-dark btn"><i class="fa fa-ellipsis-h"></i></button>
                 </div>
             </nav>
-            <button id="sign-out" class="hover btn bt-primary">Cerrar Sesion</button>
+             
             <!-- CONTENIDO -->
             <div id="contenedor">
                     <h4>Registro de Huella</h4>
                 <p>Para registrar la huella de <span style="font-weight: bold">{{ Usuario }}</span> dar clic en comenzar.</p>
-                <div class="row">
-                    <div class="col-sm-3">
+                <div class="row justify-content-center">
+                    <div class="col-sm-4">
                         <div class="card">
                             <div class="card-header">
                                 Índice izquierdo
                             </div>
-                            <img id="dedoi" class="card-img-top img-fluid hidden" src="img/huella.png">
+                            <img id="dedoi" class="card-img-top img-fluid hidden" src="img/huella-izquierda.png">
                             <div class="card-body">
                                 <p class="card-title">Acerque su huella de la mano izquierda y haga clic en Guardar.</p>
-                                <button class="btn btn-primary">Guardar</button>
+                                <button id="btn-i" class="btn btn-primary">Guardar</button>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-3">
+                    <div class="col-sm-4">
                         <div class="card">
                             <div class="card-header">
                                 Índice derecho
                             </div>
-                            <img id="dedod" class="card-img-top img-fluid" src="img/huella.png">
+                            <img id="dedod" class="card-img-top img-fluid hidden" src="img/huella-derecha.png">
                             <div class="card-body">
                                 <p class="card-title">Acerque su huella de la mano derecha y haga clic en Guardar.</p>
-                                <button class="btn btn-primary">Guardar</button>
+                                <button id="btn-d" class="btn btn-primary">Guardar</button>
                             </div>
                         </div>
                     </div> 

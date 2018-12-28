@@ -1,15 +1,11 @@
-$gris: #343a40;
-$azul: #007bff;
-$celeste: #008ccb;
-$gris_claro: #aebbc7;
-$blanco: #ffffff;
-
 body {
-  background-color: $celeste;
+  background-color: #008ccb;
 }
+
 label {
   font-weight: bold;
 }
+
 label span {
   font-weight: 100;
   margin-left: 2px;
@@ -18,7 +14,7 @@ label span {
 .fa-fingerprint {
   font-size: 100px;
   text-align: center;
-  color: $gris;
+  color: #343a40;
 }
 
 .spinner-border {
@@ -30,36 +26,37 @@ label span {
   margin: 2em 1em;
   padding: 0.5em;
   border-radius: 15px;
-  color: $blanco;
+  color: #ffffff;
   font-weight: 600;
 }
 
-// STYLE-CARD
-
 .card-header {
-  background-color: $blanco;
+  background-color: #ffffff;
 }
+
 .card {
-  border-color: $blanco;
+  border-color: #ffffff;
 }
 
 .card-header {
   font-weight: bold;
 }
+
 .card-header h3 {
   font-weight: bold;
-  color: $celeste;
+  color: #008ccb;
 }
-
-//style add
 
 .bg-secondary {
   margin: 1em;
   border-radius: 15px;
-  color: $blanco;
+  color: #ffffff;
   font-weight: 600;
   padding: 0.5em;
 }
+
 #contenedor {
   margin-top: 4em;
 }
+
+/*# sourceMappingURL=autenticacion.css.map */
